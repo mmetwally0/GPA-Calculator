@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<section class="main">
+    <div class="step" id="first">
+        <h2 class="title">Step 1</h2>
+        <h3 class="sub-title">Choose semester</h3>
+        <div class="form-box">
+            <form action="/" method="post">
+                <ul>
+                    <li>
+                        <select id="semesters" name="semesters">
+                            <option selected disabled="disabled">Select Semester..</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </li>
+                    <li><button type="submit" class="submit-btn">Choose</button>
+                </ul>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

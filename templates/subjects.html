@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<section class="main">
+    <div class="step" id="second">
+        <h2 class="title">Step 2</h2>
+        <h3 class="sub-title">Type out your scores</h3>
+        <div class="form-box">
+            <form action="/subjects" method="post">
+                <ul>
+                    {% for subject in subjects %}
+                        {% for name, credit in subject.items() %}
+                            <li><input type="text" placeholder="{{name}}" name="{{name}}" autocomplete="off" class="subject-list-item"></li>
+                        {% endfor %}
+                    {% endfor %}
+                    <li><button type="submit" class="submit-btn">Go!</button>
+                    </ul>
+                    <input id="no_subjects" name="sem_num" value="{{sem_num}}">
+                </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
